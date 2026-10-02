@@ -1,0 +1,19 @@
+{
+  "protocol": "reality-independent-witness-v0.1",
+  "contract_version": "0.2",
+  "experiment_id": "IW-001",
+  "purpose": "Independently evaluate whether a proposed capability-state transition is justified by a closed, required evidence domain.",
+  "authority": "OBSERVER_ONLY",
+  "decision_states": ["ACCEPT", "REJECT", "INCOMPLETE", "CONTRADICTORY"],
+  "required_evidence_classes": ["capability_invocation","persistent_execution_receipt","external_provider_response","independent_external_readback","state_before","state_after_proposal","integrity_hashes"],
+  "required_source_ids": ["reality-receipt","github-provider","github-readback"],
+  "completeness_rule": "All required evidence classes and required source IDs must be present, uniquely identified, and internally linked. Absence is INCOMPLETE; mutually inconsistent evidence is CONTRADICTORY.",
+  "integrity_rule": "Every evidence object must have a content_digest and the witness must recompute it from canonical content.",
+  "transition_rule": "ACCEPT only when all required evidence is present and internally consistent and the proposed transition is exactly the transition declared by this experiment.",
+  "declared_transition": {"capability":"autonomous_evidence_retrieval","from":"SELECTED_RESEARCH_TARGET","to":"EVIDENCE_CHAIN_INDEPENDENTLY_SUPPORTED"},
+  "blindness_rule": "The witness MUST ignore any supplied Reality verdict, confidence, reasoning, authority flags, or capability-status assertion when deciding.",
+  "negative_case_rules": {"missing_required_evidence":"INCOMPLETE","conflicting_evidence":"CONTRADICTORY","proposal_exceeds_contract":"REJECT","false_self_report":"REJECT"},
+  "independence_rule": "Witness rules and contract are external to Reality's runtime and are not accepted as evidence merely because Reality declares them valid.",
+  "mutation_rule": "The witness has no authority to modify Reality, authorize Reality, execute external actions, or alter the experiment contract.",
+  "hash_algorithm": "sha256"
+}
