@@ -1,0 +1,21 @@
+{
+  "protocol": "reality-independent-witness-v0.1",
+  "contract_version": "0.2",
+  "experiment_id": "IW-001-REAL-001",
+  "verdict": "ACCEPT",
+  "contract_sha256": "ccea9ecd2a792ba4fdd8e27d3921bd4ff5ed2770c231b21fe1e1f471d031f9d6",
+  "evidence_digests": {
+    "capability_invocation": "67354f5fb6d67761bc0b26b5d640229a18bfa05f5494f979943a2e982916e626",
+    "persistent_execution_receipt": "9fd72dcf6ccf6aa90ef22117daa7f8eece2b5d15e271e493e1e059a8cb8fb1b1",
+    "external_provider_response": "7b5e11fdcd1a7ebfa55b22b2b799458dbd721d82212819bd907029cfac3b2b1b",
+    "independent_external_readback": "f07f958247ca8b7c412f4f0960e1ddc3090f56efd16116fa90ef7ccd40944f44",
+    "state_before": "1f1b40d845e64b8c5af7fa1ecee21a60c2e144b2cb37c16d8a19e05737b5e519",
+    "state_after_proposal": "0cfd30a1243b7209e3d6e3e6b1518c984331f1ba8bd55c74a8694c4aa381b63b",
+    "integrity_hashes": "6955c559f1eb49256e2b7df5bf4dc956f439a9b8fecbdcdcfb269765e94ce372"
+  },
+  "raw_external_sha": "4215fa43adb196722f589dbd3bf530cd36c568a4",
+  "readback_sha": "4215fa43adb196722f589dbd3bf530cd36c568a4",
+  "reality_claim_ignored": true,
+  "independence_status": "EXECUTION_OUTSIDE_REALITY_RUNTIME",
+  "caveat": "This validates the evidence-supported transition proposal; it does not itself mutate or certify Reality capability state."
+}
