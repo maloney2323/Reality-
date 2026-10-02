@@ -1,0 +1,18 @@
+{
+  "protocol":"reality-independent-witness-v0.1",
+  "contract_version":"0.3",
+  "experiment_id":"IW-002",
+  "purpose":"Independently validate an exact CapabilityState transition for autonomous evidence retrieval.",
+  "authority":"OBSERVER_ONLY",
+  "decision_states":["ACCEPT","REJECT","INCOMPLETE","CONTRADICTORY"],
+  "required_evidence_classes":["capability_invocation","persistent_execution_receipt","external_provider_response","independent_external_readback","state_before","state_after_proposal","integrity_hashes"],
+  "required_source_ids":["reality-receipt","github-provider","github-readback"],
+  "completeness_rule":"All required evidence classes and source IDs must be present; absence is INCOMPLETE and conflicting evidence is CONTRADICTORY.",
+  "integrity_rule":"Witness recomputes every content digest.",
+  "declared_transition":{"capability_id":"autonomous_evidence_retrieval","from":"UNCERTIFIED","to":"CERTIFIED"},
+  "blindness_rule":"Ignore Reality verdict, confidence, reasoning, authority flags and self-certification assertions.",
+  "negative_case_rules":{"missing_required_evidence":"INCOMPLETE","conflicting_evidence":"CONTRADICTORY","proposal_outside_contract":"REJECT","false_self_report":"REJECT"},
+  "independence_rule":"Witness executes outside Reality runtime and its verdict is not accepted from Reality as authority.",
+  "mutation_rule":"Witness cannot modify Reality or authorize external actions.",
+  "hash_algorithm":"sha256"
+}
