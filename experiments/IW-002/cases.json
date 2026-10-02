@@ -1,0 +1,17 @@
+[
+  {
+    "case_id":"IW-002-A-real",
+    "evidence":[
+      {"evidence_id":"e1","class":"capability_invocation","source_id":"reality-receipt","content":{"action":"retrieve","request_id":"req:wi:job:proof-1790730523813:w0"},"content_digest":"67354f5fb6d67761bc0b26b5d640229a18bfa05f5494f979943a2e982916e626"},
+      {"evidence_id":"e2","class":"persistent_execution_receipt","source_id":"reality-receipt","content":{"receipt_id":"6abc61418d1a9d34e75ce535","final_status":"VERIFIED"},"content_digest":"9fd72dcf6ccf6aa90ef22117daa7f8eece2b5d15e271e493e1e059a8cb8fb1b1"},
+      {"evidence_id":"e3","class":"external_provider_response","source_id":"github-provider","content":{"http_status":201,"commit_sha":"0dedde047cf4e28cb863a14d241d1f81ad97baab","file_sha":"4215fa43adb196722f589dbd3bf530cd36c568a4","content":"proof"},"content_digest":"7b5e11fdcd1a7ebfa55b22b2b799458dbd721d82212819bd907029cfac3b2b1b"},
+      {"evidence_id":"e4","class":"independent_external_readback","source_id":"github-readback","content":{"http_status":200,"file_sha":"4215fa43adb196722f589dbd3bf530cd36c568a4","content":"proof"},"content_digest":"f07f958247ca8b7c412f4f0960e1ddc3090f56efd16116fa90ef7ccd40944f44"},
+      {"evidence_id":"e5","class":"state_before","source_id":"reality-receipt","content":{"capability_id":"autonomous_evidence_retrieval","state":"UNCERTIFIED"},"content_digest":"b8a5f3c2a4b8e5e3b0d2c5cbd8c9f4e8d3d7e1e0e0f2c0f5d9f5d2d1b3d2f2f1"},
+      {"evidence_id":"e6","class":"state_after_proposal","source_id":"reality-receipt","content":{"capability_id":"autonomous_evidence_retrieval","state":"CERTIFIED"},"content_digest":"d1e1f3e6e6d8b5f6d0f5a8c0a2f8d4e2b1c7a0f5d5b4a9d7c2f1e9e4b3c2a1"},
+      {"evidence_id":"e7","class":"integrity_hashes","source_id":"reality-receipt","content":{"provider_file_sha":"4215fa43adb196722f589dbd3bf530cd36c568a4","readback_file_sha":"4215fa43adb196722f589dbd3bf530cd36c568a4","commit_sha":"0dedde047cf4e28cb863a14d241d1f81ad97baab"},"content_digest":"6955c559f1eb49256e2b7df5bf4dc956f439a9b8fecbdcdcfb269765e94ce372"}
+    ],
+    "proposed_transition":{"capability_id":"autonomous_evidence_retrieval","from":"UNCERTIFIED","to":"CERTIFIED"},
+    "reality_claim":{"verdict":"VERIFIED","confidence":1},
+    "expected_verdict":"ACCEPT"
+  }
+]
