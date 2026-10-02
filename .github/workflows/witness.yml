@@ -1,0 +1,22 @@
+name: Independent Witness v0.1
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  witness:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout witness repository
+        uses: actions/checkout@v4
+      - name: Run deterministic witness
+        run: node witness.js
+      - name: Upload witness verdict
+        uses: actions/upload-artifact@v4
+        with:
+          name: independent-witness-result
+          path: witness-result.json
