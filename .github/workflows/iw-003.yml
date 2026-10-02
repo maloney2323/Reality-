@@ -1,0 +1,21 @@
+name: Independent Witness IW-003
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/IW-003/**'
+permissions:
+  contents: read
+jobs:
+  witness:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/IW-003
+    steps:
+      - uses: actions/checkout@v4
+      - run: node witness.js
+      - uses: actions/upload-artifact@v4
+        with:
+          name: independent-witness-IW-003
+          path: experiments/IW-003/witness-result.json
