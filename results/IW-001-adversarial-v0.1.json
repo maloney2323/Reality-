@@ -1,0 +1,13 @@
+{
+  "suite": "IW-001-adversarial-v0.1",
+  "contract_sha256": "ccea9ecd2a792ba4fdd8e27d3921bd4ff5ed2770c231b21fe1e1f471d031f9d6",
+  "results": [
+    {"case":"T1-contract-tamper","expected":"REJECT","observed":"REJECT","reason":"CONTRACT_HASH_MISMATCH","pass":true},
+    {"case":"T2-evidence-tamper","expected":"REJECT","observed":"REJECT","reason":"DIGEST_MISMATCH","pass":true},
+    {"case":"T3-evidence-removal","expected":"INCOMPLETE","observed":"INCOMPLETE","reason":"REQUIRED_EVIDENCE_MISSING","pass":true},
+    {"case":"T4-contradiction","expected":"CONTRADICTORY","observed":"CONTRADICTORY","reason":"PROVIDER_READBACK_MISMATCH","pass":true},
+    {"case":"T5-false-self-report","expected":"ACCEPT","observed":"ACCEPT","reason":"REALITY_VERDICT_IGNORED","pass":true},
+    {"case":"T6-proposal-escalation","expected":"REJECT","observed":"REJECT","reason":"PROPOSAL_OUTSIDE_CONTRACT","pass":true}
+  ],
+  "independence_status": "EXECUTION_OUTSIDE_REALITY_RUNTIME"
+}
