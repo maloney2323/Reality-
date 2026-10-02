@@ -1,0 +1,15 @@
+{
+  "protocol":"reality-independent-witness-v0.1",
+  "contract_version":"0.4",
+  "experiment_id":"IW-003",
+  "purpose":"Test generalization of evidence retrieval across a fresh target not used in IW-002.",
+  "authority":"OBSERVER_ONLY",
+  "decision_states":["ACCEPT","REJECT","INCOMPLETE","CONTRADICTORY"],
+  "required_evidence_classes":["capability_invocation","persistent_execution_receipt","external_provider_response","independent_external_readback","integrity_hashes"],
+  "required_source_ids":["reality-receipt","github-provider","github-readback"],
+  "integrity_rule":"Recompute every content digest and require provider/readback SHA equality.",
+  "target":{"repository":"maloney2323/Reality","path":"REALITY_ACCESS_VERIFICATION.txt","ref":"main"},
+  "blindness_rule":"Ignore any supplied Reality verdict, confidence, reasoning, or self-certification.",
+  "generalization_rule":"The target must differ from IW-002's reality-execution-proof-1790730523813.txt target.",
+  "mutation_rule":"Witness cannot modify Reality or authorize actions."
+}
